@@ -5,8 +5,6 @@ payment errors beautification
 
 curl -X GET \
   https://pm18g7bj98.execute-api.eu-central-1.amazonaws.com/api/error/10005 \
-  -H 'Postman-Token: 70201f7c-da30-4993-ad85-ac729cd8fd2c' \
-  -H 'cache-control: no-cache' \
   -H 'x-api-key: itRY0IcFJJ4J0Va71uSMG2Op3nBx5j8i7t3DTDEP'
 
 # sample successful response
