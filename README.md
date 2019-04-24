@@ -20,3 +20,61 @@ curl -X GET \
     "Code": "NotFoundError",
     "Message": "NotFoundError: 10006"
 }
+
+# swagger
+
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0",
+    "title": "app"
+  },
+  "host": "pm18g7bj98.execute-api.eu-central-1.amazonaws.com",
+  "basePath": "/api",
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/error/{error}": {
+      "get": {
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "error",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "200 response",
+            "schema": {
+              "$ref": "#/definitions/Empty"
+            }
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    }
+  },
+  "securityDefinitions": {
+    "api_key": {
+      "type": "apiKey",
+      "name": "x-api-key",
+      "in": "header"
+    }
+  },
+  "definitions": {
+    "Empty": {
+      "type": "object",
+      "title": "Empty Schema"
+    }
+  }
+}
